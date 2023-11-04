@@ -1,0 +1,77 @@
+{% extends 'login/base.html' %}
+{% load static %}
+{% block content %}
+<div class="row mt-2 ipadnopad">
+    <div class="col-md-4 col-lg-3">
+        <div class="position-relative border" style="    padding: 25px; min-height:300px">
+            <div id="ctl00_phBody_ProductDetail_disDiscount" class="offer position-absolute">41%</div>
+            <img     src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcShhnZmOzzyeBKijqY9w3JO1qYvZVEwmy-xuMk3O4YjyR8NYWtG" id="ctl00_phBody_ProductDetail_imgProduct" onerror="handleInvalidImages(this,'images200')" style="display: inline-block;" class="card-img-top bklazy" alt="Demon Slayer: Kimetsu No Yaiba, Vol. 1" title="Demon Slayer: Kimetsu No Yaiba, Vol. 1">
+
+        </div>
+    </div>
+    <div class="col-md-8 col-lg-9 productbrief">
+        <h1 style="display:inline-block"><span id="ctl00_phBody_ProductDetail_lblTitle" class="themecolor headingtext">Harry Potter and the Prisoner of Azkaban</span></h1>
+        <input type="hidden" name="ctl00$phBody$ProductDetail$hdnISBN" id="ctl00_phBody_ProductDetail_hdnISBN" value="9781974700523">
+        <label id="ctl00_phBody_ProductDetail_lblBinding">(Paperback)</label>
+        <label id="ctl00_phBody_ProductDetail_lblRelease"> | Released: 03 Jul 2018</label>
+        <br>
+
+        <div class=" d-inline authordetailtext">
+            <label id="ctl00_phBody_ProductDetail_lblAuthor1">By: <a href="https://www.bookswagon.com/author/j.k.-rowling">j.k.rowling</a></label>
+            <label id="ctl00_phBody_ProductDetail_lblAuthorType1">(Author)</label>
+            <label id="ctl00_phBody_ProductDetail_lblAuthor2" style="display: none;">
+            </label>
+            <label id="ctl00_phBody_ProductDetail_lblAuthorType2" style="display: none;">
+            </label>
+            <label id="ctl00_phBody_ProductDetail_lblAuthor3" style="display: none;">
+            </label>
+            <label id="ctl00_phBody_ProductDetail_lblAuthorType3" style="display: none;">
+            </label>
+            <label id="ctl00_phBody_ProductDetail_lblAuthor4" style="display: none;">
+            </label>
+            <label id="ctl00_phBody_ProductDetail_lblAuthorType4" style="display: none;">
+            </label>
+            <label id="ctl00_phBody_ProductDetail_lblAuthor5" style="display: none;">
+            </label>
+            <label id="ctl00_phBody_ProductDetail_lblAuthorType5" style="display: none;">
+            </label>
+            <label id="ctl00_phBody_ProductDetail_lblPublisher"> | Publisher: <a href="https://www.bookswagon.com/publisher/viz-media">Viz Media</a></label>
+            <label id="ctl00_phBody_ProductDetail_lblPublisherImprint"> | Publisher Imprint: Viz Media</label>
+        </div>
+
+        <div class="ratingstartarea position-relative">
+
+            <div class="bv-flex-container-column-hover">
+                <div class="nav-arrow" style="position: absolute; left: 50%; top: -10px"></div>
+
+
+<input type="hidden" name="ctl00$phBody$ProductDetail$BarStarRating$HiddenStarTotal" id="ctl00_phBody_ProductDetail_BarStarRating_HiddenStarTotal" value="0">
+
+            </div>
+        </div>
+
+
+        <hr>
+        <span class="actualprice themecolor font-weight-bold">
+            <label id="ctl00_phBody_ProductDetail_lblourPrice">₹584</label>
+        </span>
+        <br>
+        <br>
+        <div class="available mt-2 mb-2">
+            <span id="ctl00_phBody_ProductDetail_lblAvailable" style="color: green" class="available">International Edition</span>
+            <p>
+                <label id="ctl00_phBody_ProductDetail_lblBusiness">Ships within <b>18-20 Business Days</b></label>
+                <br>
+                <label id="ctl00_phBody_ProductDetail_lishipping"><br>Free Shipping in India and low cost Worldwide.</label>
+            </p>
+        </div>
+
+        <div id="ctl00_phBody_ProductDetail_divaction">
+           <a href=""> <input type="button" class="btn  border themeborder themecolor" style="width:250px; max-width: 48%;color:orange" value="Add to Wishlist" fdprocessedid="dksz9q"></a>
+            <a href="{% url 'form' %}"><input type="button" class="btn  border themeborder themecolor" style="width:250px; max-width: 48%;color:orange" value="Buy Now"  fdprocessedid="dksz9q"></a>
+
+        </div>
+        <label id="lblcartmsg_23105853" class="alert-success" style="display: none;"></label>
+    </div>
+</div>
+{% endblock %}

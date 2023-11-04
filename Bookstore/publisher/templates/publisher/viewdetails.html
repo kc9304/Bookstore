@@ -1,0 +1,71 @@
+
+
+    <style>
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #444;
+            color: #fff;
+        }
+
+        table, th, td {
+            border: 2px solid #222;
+        }
+
+        th {
+            background-color: #555;
+        }
+
+        td {
+            text-align: center;
+            padding: 10px;
+        }
+</style>
+    {% extends 'publisher/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr style="color:white">
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Alternative Number</th>
+        <th>Landmark</th>
+        <th>Pincode</th>
+        <th>City</th>
+        <th>Town</th>
+    </tr>
+    </thead>
+
+    {% for person in personal %}
+    <tr style="color:white">
+        <td>{{ person.first_name }}</td>
+        <td>{{ person.middle_name }}</td>
+        <td>{{ person.last_name }}</td>
+        <td>{{ person.address }}</td>
+        <td>{{ person.email }}</td>
+        <td>{{ person.phone_number }}</td>
+        <td>{{ person.alternative_number }}</td>
+        <td>{{ person.landmark }}</td>
+        <td>{{ person.pincode }}</td>
+        <td>{{ person.city }}</td>
+        <td>{{ person.town }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

@@ -1,0 +1,207 @@
+<style>
+.hoverable:not(:hover) + .show-on-hover {
+    display: none;
+}
+h5 {
+font-weight: bold;
+}
+  .img {
+            border: 2px solid white;
+            display: flex;
+        }
+
+        .img div {
+            position: relative; /* Add this to make positioning of text relative to the container */
+        }
+
+        .img img {
+            width: 200px;
+            padding: 5px;
+            border: 2px solid red;
+        }
+
+        .img h5 {
+            font-family: 'Brush Script MT', cursive;
+            position: absolute; /* Position the text absolutely within the container */
+            bottom: 10px; /* Adjust as needed to position the text */
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background */
+            text-align: center; /* Center the text horizontally */
+            opacity: 0; /* Initially hide the text */
+            transition: opacity 0.3s ease; /* Add a smooth transition effect */
+            padding: 5px;
+        }
+
+
+
+    .img p{
+      font-family: cursive;
+        position: absolute; /* Position the text absolutely within the container */
+        top:50 px; /* Adjust as needed to position the text */
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background */
+        text-align: center; /* Center the text horizontally */
+        opacity: 0; /* Initially hide the text */
+        transition: opacity 0.3s ease; /* Add a smooth transition effect */
+
+    }
+
+    .img div:hover h5 {
+        opacity: 1; /* Show the text on hover */
+    }
+    .img div:hover p {
+        opacity: 1; /* Show the text on hover */
+    }
+    .buy-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.buy-button:hover {
+    background-color:#0056b3;
+}
+</style>
+
+{% extends 'login/base.html' %}
+{% load static %}
+{% block content %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/6b064545364063.582debfa03a42.png" alt="First slide">
+    </div>
+  </div>
+</div>
+<div>
+<center>
+<div style="padding-left: 20px;height:50px;     background-image: url('data:image/jpeg;base64,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');" class="c1">
+    <h2 style="font-style: italic;color:white">Harry Potter Collection</h2>
+</div>
+    </center>
+<div  style="border:2px dotted transparent;text-align:right;padding-top:3px" class="main1">
+
+        <br>
+        <br>
+
+<div style="border:2px solid white; display:flex" class="img">
+
+    <div style="padding-left:100px;" class="img1">
+    <a href="{% url 'hvol1' %}"    > <img style="width:170px; padding: 5px; border:2px solid red;"    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtFKRzqIPBTYkse7NKIPTjw0ggQB02c636StmC1mONyQwec4x1"></a>
+        <h5 style="font-family: 'Brush Script MT', cursive;">Harry Potter and the Philosopher's Stone</h5>
+      <p>Price: 584</p>
+
+         <br>
+         <br>
+         <br>
+
+        <a href="{% url 'hvol1' %}" ><button   class="buy-button">Quick view</button></a>
+    </div>
+
+    <div style="padding-left:200px" class="img2">
+        <a href="{% url 'hvol2' %}"  >   <img style="width:170px; padding: 5px; border:2px solid red;" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS9GMJx0Z5jfDGP2PH86U_83sQJRdl0twHHcjuUgsXpjok7eWUo"></a>
+        <h5 style="font-family: 'Brush Script MT', cursive;">Harry Potter and the Chamber of Secrets</h5>
+        <p>Price: 531</p>
+         <br>
+         <br>
+         <br>
+        <a href="{% url 'hvol2' %}"  ><button class="buy-button">Quick view</button></a>
+    </div>
+
+    <div style="padding-left:200px" class="img3">
+        <a href="{% url 'hvol3' %}">   <img style="width:170px; padding: 5px; border:2px solid red;" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcShhnZmOzzyeBKijqY9w3JO1qYvZVEwmy-xuMk3O4YjyR8NYWtG"></a>
+        <h5 style="font-family: 'Brush Script MT', cursive;">Harry Potter and the Prisoner of Azkaban</h5>
+        <p>Price: 585</p>
+        <br>
+         <br>
+         <br>
+       <a href="{% url 'hvol3' %}"  ><button class="buy-button">Quick view</button></a>
+
+    </div>
+
+    <div style="padding-left:200px" class="img4">
+        <a href="{% url 'hvol4' %}"  >    <img style="width:170px; padding: 5px; border:2px solid red;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyERLrWbMJtYGXTsjlv6T5LdcVqVakG9ZTSBMyzVrpAhx-kZCc"></a>
+        <h5 style="font-family: 'Brush Script MT', cursive;">Harry Potter and the Goblet of Fire</h5>
+        <p>Price: 546</p>
+         <br>
+         <br>
+         <br>
+      <a href="{% url 'hvol4' %}"  ><button class="buy-button">Quick view</button></a>
+    </div>
+  </div>
+
+
+</div>
+<br>
+<br>
+<br>
+<div  style="border:2px dotted transparent;text-align:right;padding-top:3px" class="main1">
+
+        <br>
+        <br>
+
+<div style="border:2px solid white; display:flex" class="img">
+
+    <div style="padding-left:100px;" class="img1">
+        <a href="{% url 'hvol5' %}"  >      <img style="width:170px; padding: 5px; border:2px solid red;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb3ndCNpY8706PQUHn7VG8CTJ1io8GEMmwfkTZPffRlnyI_sPX"></a>
+        <h5 style="font-family: 'Brush Script MT', cursive;">Harry Potter and the Order of the Phoenix<</h5>
+        <p>Price: 535</p>
+         <br>
+         <br>
+         <br>
+
+      <a href="{% url 'hvol5' %}"  ><button class="buy-button">Quick view</button></a>
+    </div>
+
+    <div style="padding-left:200px" class="img2">
+        <img style="width:170px; padding: 5px; border:2px solid red;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEQAIcXh7cnFfqWaPyRsxew5GttmF3Z2tQBycTHPjFYPAjAO7-">
+        <h5 style="font-family: 'Brush Script MT', cursive;">Harry Potter and the Half-Blood Prince</h5>
+        <p>Price: 560</p>
+         <br>
+         <br>
+         <br>
+       <a href=""  ><button class="buy-button">Quick view</button></a>
+    </div>
+
+    <div style="padding-left:200px" class="img3">
+        <img style="width:170px; padding: 5px; border:2px solid red;" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQAIrsR7nL2V-S_6dc4znLYICDx_1Deh-SiLzbZMuuSedI7WS0e">
+        <h5 style="font-family: 'Brush Script MT', cursive;">Harry Potter and the Deathly Hallows</h5>
+        <p>Price: 500</p>
+        <br>
+         <br>
+         <br>
+       <a href=""  ><button class="buy-button">Quick view</button></a>
+
+    </div>
+
+    <div style="padding-left:200px" class="img4">
+        <img style="width:170px; padding: 5px; border:2px solid red;" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQcfDnxe4cB2PhKJJUlcrPqQFdMdBHdYcHHjO0VZ9qeclDOT_Xz">
+        <h5 style="font-family: 'Brush Script MT', cursive;">Harry Potter and the Cursed Child</h5>
+        <p>Price: 535</p>
+         <br>
+         <br>
+         <br>
+       <a href=""  ><button class="buy-button">Quick view</button></a>
+    </div>
+  </div>
+</div>
+    <br>
+    <br>
+<br>
+<br>
+
+
+
+{% endblock %}

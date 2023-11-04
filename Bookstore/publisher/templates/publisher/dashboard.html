@@ -1,0 +1,46 @@
+<style>
+  @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+{% extends 'publisher/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1 style="font-family:Brush Script MT;text-align:center;font-size:100px">DashBoard</h1>
+<center style="padding-left:200px;">
+<div class="row">
+        <div class="col-sm-5">
+          <div class="well">
+            <h4>Orders</h4>
+            <h1>{{ orders }}</h1>
+              <a href="{% url 'viewdetails' %}"><input type="submit" value="View Orders" class="w3-button w3-black w3-round-xxlarge text-center"></a>
+          </div>
+        </div>
+</div>
+
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+
+{% endblock %}
